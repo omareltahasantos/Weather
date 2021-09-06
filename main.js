@@ -65,7 +65,7 @@ var tomorrowafter4 = diaFormato(fechaNextDay(fechaNextDay(fechaNextDay(fechaNext
 
 
 
-console.log(tomorrowafter)
+//console.log(tomorrowafter)
 
 $("#text-tomorrow").html(tomorrow)
 
@@ -75,7 +75,7 @@ $("#text-tomorrow3").html(tomorrowafter2)
 
 $("#text-tomorrow4").html(tomorrowafter3)
 
-$("#text-tomorrow5").html(tomorrowafter4)
+$("#text-tomorrow5").html(tomorrowafter4) //x
 
 
 

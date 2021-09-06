@@ -307,65 +307,63 @@ $("#grados-centigrados").prop("disabled",true)
    $("#grados-centigrados").click(botonCentigrados)
    ///////////////////////////////////////////////FIN DE PAGINA AL CARGAR/////////////////////////////////////////////////
    /////////////////////////////////////////////////////////CAMBIA DINAMICAMENTE SEGUN QUE LE PONGAMOS EN EL BUSCADOR//////////////////////////////////////////
-   $("#buscar").click(function(){
-    var buscador = $('#buscar-button').val();
-    console.log(buscador)
+   
+    $("#barcelona").click(function(){
+        var ciudad  = $("#barcelona").html()
+        
+        var ciudad_lower = ciudad.toLowerCase()
 
-    $.ajax({
-        method: 'GET',
-        url:  'https://www.metaweather.com/api/location/search/?query='+buscador,
-        success: function(data){
-           
-            const template = data.map(location =>($("#localidad").html(location.title))) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
-
-         
-        }
-    })
-
-
+        $.ajax({
+            method: 'GET',
+            url:  'https://www.metaweather.com/api/location/search/?query='+ciudad_lower,
+            success: function(data){
+               
+                const template = data.map(location =>($("#localidad").html(location.title))) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
     
-    var year = today.getFullYear();
-    var month = (today.getMonth() + 1) ; console.log(month)
-    var day = today.getDate(); console.log(day)
-    
-    var woeid = new Array();
-   woeid['barcelona'] = 753692;
-   woeid['london'] = 44418;
-   woeid['rome'] = 721943;
-   woeid['paris'] = 615702;
-   woeid['istanbul']  =2344116;
-   woeid['tokyo'] = 1118370;
-   var idCity = "";
+             
+            }
+        })
 
-    //Recorremos el array con un for each
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1) ; console.log(month)
+        var day = today.getDate(); console.log(day)
+        
+        var woeid = new Array();
+       woeid['barcelona'] = 753692;
+       woeid['london'] = 44418;
+       woeid['rome'] = 721943;
+       woeid['paris'] = 615702;
+       woeid['istanbul']  =2344116;
+       woeid['tokyo'] = 1118370;
+       var idCity = "";
+
+
+       //Recorremos el array con un for each
     for(var clave in woeid) {
-        if (clave === buscador){
+        if (clave === ciudad_lower){
             idCity=woeid[clave]
         }
       console.log(clave+": " +woeid[clave]);
     }
 
     console.log(idCity)
- 
 
+    var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
 
-var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
-    //Con esto vamos a sacar 
     $.ajax({
         method: 'GET',
         url:  urlLocation,
         success: function(data){
             console.log(data)
-            const template = data.map(location =>(
-                $("#numero-wind").html(Math.round(location.wind_speed)),
-                $("#numero-airpressure").html(Math.round(location.air_pressure)),
-                $("#numero-humidity").html(location.humidity),
-                $("#numero-visibility").html(Math.round(location.visibility)),
-                $("#weather").html(location.weather_state_name),
-                $("#grados").html(Math.round(location.the_temp)+ '℃'),
+            
+                $("#numero-wind").html(Math.round(data[0].wind_speed)),
+                $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
+                $("#numero-humidity").html(data[0].humidity),
+                $("#numero-visibility").html(Math.round(data[0].visibility)),
+                $("#weather").html(data[0].weather_state_name),
+                $("#grados").html(Math.round(data[0].the_temp)+ '℃'),
                 $("#nube").css('backgroundImage',  '/images/HeavyCloud.png')
                 
-                )) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
 
          
         }
@@ -392,6 +390,372 @@ var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/
             }
         })
     }
+ 
+
+       
+    })
+
+    $("#paris").click(function(){
+        var ciudad  = $("#paris").html()
+        
+        var ciudad_lower = ciudad.toLowerCase()
+
+        $.ajax({
+            method: 'GET',
+            url:  'https://www.metaweather.com/api/location/search/?query='+ciudad_lower,
+            success: function(data){
+               
+                const template = data.map(location =>($("#localidad").html(location.title))) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1) ; console.log(month)
+        var day = today.getDate(); console.log(day)
+        
+        var woeid = new Array();
+       woeid['barcelona'] = 753692;
+       woeid['london'] = 44418;
+       woeid['rome'] = 721943;
+       woeid['paris'] = 615702;
+       woeid['istanbul']  =2344116;
+       woeid['tokyo'] = 1118370;
+       var idCity = "";
+
+
+       //Recorremos el array con un for each
+    for(var clave in woeid) {
+        if (clave === ciudad_lower){
+            idCity=woeid[clave]
+        }
+      console.log(clave+": " +woeid[clave]);
+    }
+
+    console.log(idCity)
+
+    var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
+
+    $.ajax({
+        method: 'GET',
+        url:  urlLocation,
+        success: function(data){
+            console.log(data)
+          
+                $("#numero-wind").html(Math.round(data[0].wind_speed)),
+                $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
+                $("#numero-humidity").html(data[0].humidity),
+                $("#numero-visibility").html(Math.round(data[0].visibility)),
+                $("#weather").html(data[0].weather_state_name),
+                $("#grados").html(Math.round(data[0].the_temp)+ '℃'),
+                $("#nube").css('backgroundImage',  '/images/HeavyCloud.png')
+                
+             
+
+         
+        }
+    })
+
+    function nextDayAjax(dia,attr1, attr2){
+
+        var urllocation= 'https://www.metaweather.com/api/location/753692/'+year+'/'+month+'/'+dia+'/'  
+
+        $.ajax({
+            method: 'GET',
+            url:  urllocation,
+            success: function(data){
+                console.log(data)
+                const template = data.map(location =>(
+
+                    $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
+                    $('#'+attr2).html(Math.round(location.min_temp) +'℃' )
+                  
+                    
+                    )) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+    }
+ 
+
+       
+    })
+
+    $("#tokyo").click(function(){
+        var ciudad  = $("#tokyo").html()
+        
+        var ciudad_lower = ciudad.toLowerCase()
+
+        $.ajax({
+            method: 'GET',
+            url:  'https://www.metaweather.com/api/location/search/?query='+ciudad_lower,
+            success: function(data){
+               
+                const template = data.map(location =>($("#localidad").html(location.title))) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1) ; console.log(month)
+        var day = today.getDate(); console.log(day)
+        
+        var woeid = new Array();
+       woeid['barcelona'] = 753692;
+       woeid['london'] = 44418;
+       woeid['rome'] = 721943;
+       woeid['paris'] = 615702;
+       woeid['istanbul']  =2344116;
+       woeid['tokyo'] = 1118370;
+       var idCity = "";
+
+
+       //Recorremos el array con un for each
+    for(var clave in woeid) {
+        if (clave === ciudad_lower){
+            idCity=woeid[clave]
+        }
+      console.log(clave+": " +woeid[clave]);
+    }
+
+    console.log(idCity)
+
+    var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
+
+    $.ajax({
+        method: 'GET',
+        url:  urlLocation,
+        success: function(data){
+         
+           
+                
+              
+                $("#numero-wind").html(Math.round(data[0].wind_speed)),
+                $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
+                $("#numero-humidity").html(data[0].humidity),
+                $("#numero-visibility").html(Math.round(data[0].visibility)),
+                $("#weather").html(data[0].weather_state_name),
+                $("#grados").html(Math.round(data[0].the_temp)+ '℃'),
+                $("#nube").css('backgroundImage',  '/images/HeavyCloud.png')
+                
+          
+
+         
+        }
+    })
+
+    function nextDayAjax(dia,attr1, attr2){
+
+        var urllocation= 'https://www.metaweather.com/api/location/753692/'+year+'/'+month+'/'+dia+'/'  
+
+        $.ajax({
+            method: 'GET',
+            url:  urllocation,
+            success: function(data){
+                console.log(data)
+                const template = data.map(location =>(
+
+                    $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
+                    $('#'+attr2).html(Math.round(location.min_temp) +'℃' )
+                  
+                    
+                    )) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+    }
+ 
+
+       
+    })
+    $("#istanbul").click(function(){
+        var ciudad  = $("#istanbul").html()
+        
+        var ciudad_lower = ciudad.toLowerCase()
+
+        $.ajax({
+            method: 'GET',
+            url:  'https://www.metaweather.com/api/location/search/?query='+ciudad_lower,
+            success: function(data){
+               
+                const template = data.map(location =>($("#localidad").html(location.title))) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1) ; console.log(month)
+        var day = today.getDate(); console.log(day)
+        
+        var woeid = new Array();
+       woeid['barcelona'] = 753692;
+       woeid['london'] = 44418;
+       woeid['rome'] = 721943;
+       woeid['paris'] = 615702;
+       woeid['istanbul']  =2344116;
+       woeid['tokyo'] = 1118370;
+       var idCity = "";
+
+
+       //Recorremos el array con un for each
+    for(var clave in woeid) {
+        if (clave === ciudad_lower){
+            idCity=woeid[clave]
+        }
+      console.log(clave+": " +woeid[clave]);
+    }
+
+    console.log(idCity)
+    var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
+
+
+    $.ajax({
+        method: 'GET',
+        url:  urlLocation,
+        success: function(data){
+            console.log(data)
+      
+                $("#numero-wind").html(Math.round(data[0].wind_speed)),
+                $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
+                $("#numero-humidity").html(data[0].humidity),
+                $("#numero-visibility").html(Math.round(data[0].visibility)),
+                $("#weather").html(data[0].weather_state_name),
+                $("#grados").html(Math.round(data[0].the_temp)+ '℃'),
+                $("#nube").css('backgroundImage',  '/images/HeavyCloud.png')
+                
+             
+
+         
+        }
+    })
+
+    function nextDayAjax(dia,attr1, attr2){
+
+        var urllocation= 'https://www.metaweather.com/api/location/753692/'+year+'/'+month+'/'+dia+'/'  
+
+        $.ajax({
+            method: 'GET',
+            url:  urllocation,
+            success: function(data){
+                console.log(data)
+                const template = data.map(location =>(
+
+                    $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
+                    $('#'+attr2).html(Math.round(location.min_temp) +'℃' )
+                  
+                    
+                    )) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+    }
+ 
+
+       
+    })
+
+    $("#rome").click(function(){
+        var ciudad  = $("#rome").html()
+        
+        var ciudad_lower = ciudad.toLowerCase()
+
+        $.ajax({
+            method: 'GET',
+            url:  'https://www.metaweather.com/api/location/search/?query='+ciudad_lower,
+            success: function(data){
+               
+                const template = data.map(location =>($("#localidad").html(location.title))) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1) ; console.log(month)
+        var day = today.getDate(); console.log(day)
+        
+        var woeid = new Array();
+       woeid['barcelona'] = 753692;
+       woeid['london'] = 44418;
+       woeid['rome'] = 721943;
+       woeid['paris'] = 615702;
+       woeid['istanbul']  =2344116;
+       woeid['tokyo'] = 1118370;
+       var idCity = "";
+
+
+       //Recorremos el array con un for each
+    for(var clave in woeid) {
+        if (clave === ciudad_lower){
+            idCity=woeid[clave]
+        }
+      console.log(clave+": " +woeid[clave]);
+    }
+
+    console.log(idCity)
+    var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
+
+
+    $.ajax({
+        method: 'GET',
+        url:  urlLocation,
+        success: function(data){
+            console.log(data)
+          
+                $("#numero-wind").html(Math.round(data[0].wind_speed)),
+                $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
+                $("#numero-humidity").html(data[0].humidity),
+                $("#numero-visibility").html(Math.round(data[0].visibility)),
+                $("#weather").html(data[0].weather_state_name),
+                $("#grados").html(Math.round(data[0].the_temp)+ '℃'),
+                $("#nube").css('backgroundImage',  '/images/HeavyCloud.png')
+                
+              
+
+         
+        }
+    })
+
+    function nextDayAjax(dia,attr1, attr2){
+
+        var urllocation= 'https://www.metaweather.com/api/location/753692/'+year+'/'+month+'/'+dia+'/'  
+
+        $.ajax({
+            method: 'GET',
+            url:  urllocation,
+            success: function(data){
+                console.log(data)
+                const template = data.map(location =>(
+
+                    $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
+                    $('#'+attr2).html(Math.round(location.min_temp) +'℃' )
+                  
+                    
+                    )) //Hacemos que solo haga 5 pasadas y meta en la array un id en cada posicion
+    
+             
+            }
+        })
+    }
+ 
+
+       
+    })
+   ////////////////////////////////////////////////
+   $("#buscar").click(function(){
+  
+
+
+
+var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
+    //Con esto vamos a sacar 
+   
 
     var dayTomorrow = fechaNextDay(today).getDate(); 
    var atributo1 = $("#grado-left").attr('id')

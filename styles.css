@@ -1,0 +1,947 @@
+#rectangulo-izquierda{
+    position: absolute;
+    width: 459px;
+    height: 1023px;
+    left: 0px;
+    top: 0px;
+    background-color: #1E213A;
+}
+
+#rectangulo-derecha{
+    position: absolute;
+    width: 1461px;
+    height: 1023px;
+    left: 459px;
+    top: 0px;
+    background-color: #100E1D;
+}
+
+#search-button{
+    position: absolute;
+    width: 161px;
+    height: 40px;
+    left: 46px;
+    top: 42px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #E7E7EB;
+    background: #6E707A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#gps{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 373px;
+    top: 42px;
+
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+
+    color: #E7E7EB;
+    }
+
+    #img-nubes-fondo1{
+        position: absolute;
+        width: 203px;
+        height: 150px;
+        left: -89px;
+        top: 103px;
+
+        background: url('images/HeavyCloud.png');
+    }
+
+    #img-nubes-fondo2{
+        position: absolute;
+        width: 203px;
+        height: 150px;
+        left: 336px;
+        top: 116px;
+        background: url('images/HeavyCloud.png');
+    }
+
+    #img-nubes-fondo3{
+        position: absolute;
+        width: 203px;
+        height: 183px;
+        left: -111px;
+        top: 266px;
+        background: url('images/HeavyCloud.png');
+    
+
+    }
+
+    #img-nubes-fondo4{
+        
+    position: absolute;
+    width: 147px;
+    height: 109px;
+    left: 323px;
+    top: 370px;
+    background: url('images/HeavyCloud.png');
+    }
+
+    #nube{
+        position: absolute;
+        width: 202px;
+        height: 234px;
+        left: 129px;
+        top: 191px;
+
+        background: url('images/Shower.png');
+    }
+
+    #grados{
+        position: absolute;
+        width: 700px;
+        height: 169px;
+        left: 124px;
+        top: 512px;
+
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 144px;
+        line-height: 169px;
+        /* identical to box height */
+
+
+        color: #E7E7EB;
+
+    }
+
+    #weather{
+        position: absolute;
+        width: 129px;
+        height: 42px;
+        left: 165px;
+        top: 768px;
+
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+
+        color: #A09FB1;
+
+    }
+    #day{
+        position: absolute;
+        width: 51px;
+        height: 21px;
+        left: 148px;
+        top: 897px;
+
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #88869D;
+    }
+
+    #divide{
+        
+        position: absolute;
+        width: 7px;
+        height: 21px;
+        left: 215px;
+        top: 897px;
+
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #88869D;
+    }
+
+    #data{
+        
+position: absolute;
+width: 90px;
+height: 21px;
+left: 238px;
+top: 897px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+
+color: #88869D;
+
+    }
+
+
+#ubication-icon{
+    position: absolute;
+    left: 20.83%;
+    right: 20.83%;
+    top: 8.33%;
+    bottom: 10.54%;
+    background: #88869D;
+}
+
+#ubication-name{
+    position: absolute;
+width: 90px;
+height: 21px;
+left: 200px;
+top: 950px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 21px;
+
+color: #88869D;
+}
+#grados-centigrados{
+    
+position: absolute;
+width: 40px;
+height: 40px;
+left: 1223px;
+top: 42px;
+color: #110E3C;
+background: #E7E7EB;
+border-radius: 54px;
+font-family: Raleway;
+
+}
+
+#grados-farenheit{
+    
+position: absolute;
+width: 40px;
+height: 40px;
+left: 1275px;
+top: 42px;
+
+background: #585676;
+border-radius: 54px;
+
+color: #E7E7EB;
+}
+
+#tomorrow{
+    position: absolute;
+width: 120px;
+height: 177px;
+left: 250px; /*300px de diferencia entre que haber en los lados*/
+top: 148px;
+
+background: #1E213A;
+}
+
+#text-tomorrow{
+    
+position: absolute;
+width: 76px;
+height: 19px;
+left: 20px;
+top: 20px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #E7E7EB;
+
+
+}
+
+#tomorrow-icon{
+    position: absolute;
+    width: 56.44px;
+    height: 62px;
+    left: 27px;
+    top: 50px;
+
+ 
+}
+
+#grado-left{
+    position: absolute;
+width: 33px;
+height: 19px;
+left: 27px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #E7E7EB;
+}
+
+#grado-right{
+    position: absolute;
+width: 30px;
+height: 19px;
+left: 72px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #A09FB1;
+
+}
+
+
+
+#tomorrow2{
+    position: absolute;
+width: 120px;
+height: 177px;
+left: 450px; /*300px de diferencia entre que haber en los lados*/
+top: 148px;
+
+background: #1E213A;
+}
+
+#text-tomorrow2{
+    
+position: absolute;
+width: 76px;
+height: 19px;
+left: 20px;
+top: 20px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #E7E7EB;
+
+
+}
+
+#tomorrow-icon2{
+    position: absolute;
+    width: 56.44px;
+    height: 62px;
+    left: 27px;
+    top: 50px;
+
+ 
+}
+
+#grado-left2{
+    position: absolute;
+width: 33px;
+height: 19px;
+left: 27px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #E7E7EB;
+}
+
+#grado-right2{
+    position: absolute;
+width: 30px;
+height: 19px;
+left: 72px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #A09FB1;
+
+}
+
+#tomorrow3{
+    position: absolute;
+width: 120px;
+height: 177px;
+left: 650px; /*300px de diferencia entre que haber en los lados*/
+top: 148px;
+
+background: #1E213A;
+}
+
+#text-tomorrow3{
+    
+position: absolute;
+width: 76px;
+height: 19px;
+left: 20px;
+top: 20px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #E7E7EB;
+
+
+}
+
+#tomorrow-icon3{
+    position: absolute;
+    width: 60px;
+    height: 62px;
+    left: 27px;
+    top: 50px;
+
+ 
+}
+
+#grado-left3{
+    position: absolute;
+width: 33px;
+height: 19px;
+left: 27px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #E7E7EB;
+}
+
+#grado-right3{
+    position: absolute;
+width: 30px;
+height: 19px;
+left: 72px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #A09FB1;
+
+}
+
+
+
+#tomorrow4{
+    position: absolute;
+width: 120px;
+height: 177px;
+left: 850px; /*300px de diferencia entre que haber en los lados*/
+top: 148px;
+
+background: #1E213A;
+}
+
+#text-tomorrow4{
+    
+position: absolute;
+width: 76px;
+height: 19px;
+left: 20px;
+top: 20px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #E7E7EB;
+
+
+}
+
+#tomorrow-icon4{
+    position: absolute;
+    width: 56.44px;
+    height: 62px;
+    left: 27px;
+    top: 50px;
+
+ 
+}
+
+#grado-left4{
+    position: absolute;
+width: 33px;
+height: 19px;
+left: 27px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #E7E7EB;
+}
+
+#grado-right4{
+    position: absolute;
+width: 30px;
+height: 19px;
+left: 72px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #A09FB1;
+
+}
+
+
+#tomorrow5{
+    position: absolute;
+width: 120px;
+height: 177px;
+left: 1050px; /*300px de diferencia entre que haber en los lados*/
+top: 148px;
+
+background: #1E213A;
+}
+
+#text-tomorrow5{
+    
+position: absolute;
+width: 76px;
+height: 19px;
+left: 20px;
+top: 20px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #E7E7EB;
+
+
+}
+
+#tomorrow-icon5{
+    position: absolute;
+    width: 56.44px;
+    height: 62px;
+    left: 27px;
+    top: 50px;
+
+ 
+}
+
+#grado-left5{
+    position: absolute;
+width: 33px;
+height: 19px;
+left: 27px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #E7E7EB;
+}
+
+#grado-right5{
+    position: absolute;
+width: 30px;
+height: 19px;
+left: 72px;
+top: 145px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #A09FB1;
+
+}
+
+#highlights{
+    position: absolute;
+    width: 220px;
+    height: 28px;
+    left: 250px;
+    top: 397px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #E7E7EB;
+}
+
+#wind-status{
+    position: absolute;
+    width: 328px;
+    height: 204px;
+    left: 350px;
+    top: 457px;
+
+    background: #1E213A;
+}
+
+#humidity-status{
+    position: absolute;
+    width: 328px;
+    height: 204px;
+    left: 750px;
+    top: 457px;
+
+    background: #1E213A;
+}
+
+#wind{
+    position: absolute;
+    width: 90px;
+    height: 19px;
+    left: 120px;
+    top: 30px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #E7E7EB;
+
+}
+#mph{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 140px;
+    top: 55px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 75px;
+
+    color: #E7E7EB;
+
+}
+
+#numero-wind{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 105px;
+    top: 55px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+
+    color: #E7E7EB;
+}
+
+#name-wind{
+    position: absolute;
+width: 38px;
+height: 16px;
+left: 150px;
+top: 150px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 16px;
+
+color: #E7E7EB;
+}
+
+
+
+
+
+
+
+
+
+
+
+#humidity{
+    position: absolute;
+    width: 90px;
+    height: 19px;
+    left: 120px;
+    top: 30px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #E7E7EB;
+
+}
+#percent-humidity{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 185px;
+    top: 65px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 75px;
+
+    color: #E7E7EB;
+
+}
+
+#numero-humidity{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 105px;
+    top: 55px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+
+    color: #E7E7EB;
+}
+
+#grafic-humidity{
+    position: absolute;
+width: 38px;
+height: 16px;
+left: 150px;
+top: 150px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 16px;
+
+color: #E7E7EB;
+}
+
+
+#visibility{
+    
+position: absolute;
+width: 328px;
+height: 159px;
+left: 350px;
+top: 709px;
+
+background: #1E213A;
+}
+
+
+#air-pressure{
+    position: absolute;
+    width: 328px;
+    height: 160px;
+    left: 750px;
+    top: 709px;
+
+    background: #1E213A;
+}
+
+
+#visibility-title{
+    position: absolute;
+width: 63px;
+height: 19px;
+left: 130px;
+top: 30px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #E7E7EB;
+
+}
+
+
+#numero-visibility{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 70px;
+    top: 55px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    color: #E7E7EB;
+
+}
+
+#miles{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 170px;
+    top: 55px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 75px;
+    color: #E7E7EB;
+}
+
+#air-pressure-title{
+    position: absolute;
+    width: 90px;
+    height: 19px;
+    left: 120px;
+    top: 30px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #E7E7EB;
+}
+
+#numero-airpressure{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 70px;
+    top: 55px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    color: #E7E7EB;
+}
+
+#mb{
+    position: absolute;
+    width: 113px;
+    height: 75px;
+    left: 205px;
+    top: 65px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 75px;
+    color: #E7E7EB;
+}
+
+#buscar{
+    
+position: absolute;
+width: 86px;
+height: 48px;
+
+
+background: #3C47E9;
+}

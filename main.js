@@ -65,8 +65,6 @@ var tomorrowafter4 = diaFormato(fechaNextDay(fechaNextDay(fechaNextDay(fechaNext
 
 
 
-//console.log(tomorrowafter)
-
 $("#text-tomorrow").html(tomorrow)
 
 $("#text-tomorrow2").html(tomorrowafter)
@@ -99,8 +97,8 @@ $("#text-tomorrow5").html(tomorrowafter4) //x
 
 
     var year = today.getFullYear();
-    var month = (today.getMonth() + 1) ; console.log(month)
-    var day = today.getDate(); console.log(day)
+    var month = (today.getMonth() + 1) ; 
+    var day = today.getDate(); 
 
  
 
@@ -111,7 +109,7 @@ var urlLocation = 'https://www.metaweather.com/api/location/753692/'+year+'/'+mo
         method: 'GET',
         url:  urlLocation,
         success: function(data){
-            console.log(data)
+           
             const template = data.map(location =>(
                 $("#numero-wind").html(Math.round(location.wind_speed)),
                 $("#numero-airpressure").html(Math.round(location.air_pressure)),
@@ -134,7 +132,7 @@ var urlLocation = 'https://www.metaweather.com/api/location/753692/'+year+'/'+mo
             method: 'GET',
             url:  urllocation,
             success: function(data){
-                console.log(data)
+                
                 const template = data.map(location =>(
 
                     $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
@@ -325,8 +323,8 @@ $("#grados-centigrados").prop("disabled",true)
         })
 
         var year = today.getFullYear();
-        var month = (today.getMonth() + 1) ; console.log(month)
-        var day = today.getDate(); console.log(day)
+        var month = (today.getMonth() + 1) ;
+        var day = today.getDate(); 
         
         var woeid = new Array();
        woeid['barcelona'] = 753692;
@@ -343,10 +341,10 @@ $("#grados-centigrados").prop("disabled",true)
         if (clave === ciudad_lower){
             idCity=woeid[clave]
         }
-      console.log(clave+": " +woeid[clave]);
+     
     }
 
-    console.log(idCity)
+
 
     var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
 
@@ -354,7 +352,7 @@ $("#grados-centigrados").prop("disabled",true)
         method: 'GET',
         url:  urlLocation,
         success: function(data){
-            console.log(data)
+        
             
                 $("#numero-wind").html(Math.round(data[0].wind_speed)),
                 $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
@@ -377,7 +375,7 @@ $("#grados-centigrados").prop("disabled",true)
             method: 'GET',
             url:  urllocation,
             success: function(data){
-                console.log(data)
+            
                 const template = data.map(location =>(
 
                     $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
@@ -412,8 +410,8 @@ $("#grados-centigrados").prop("disabled",true)
         })
 
         var year = today.getFullYear();
-        var month = (today.getMonth() + 1) ; console.log(month)
-        var day = today.getDate(); console.log(day)
+        var month = (today.getMonth() + 1) ; 
+        var day = today.getDate(); 
         
         var woeid = new Array();
        woeid['barcelona'] = 753692;
@@ -430,10 +428,10 @@ $("#grados-centigrados").prop("disabled",true)
         if (clave === ciudad_lower){
             idCity=woeid[clave]
         }
-      console.log(clave+": " +woeid[clave]);
+   
     }
 
-    console.log(idCity)
+
 
     var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
 
@@ -441,7 +439,7 @@ $("#grados-centigrados").prop("disabled",true)
         method: 'GET',
         url:  urlLocation,
         success: function(data){
-            console.log(data)
+          
           
                 $("#numero-wind").html(Math.round(data[0].wind_speed)),
                 $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
@@ -465,7 +463,7 @@ $("#grados-centigrados").prop("disabled",true)
             method: 'GET',
             url:  urllocation,
             success: function(data){
-                console.log(data)
+           
                 const template = data.map(location =>(
 
                     $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
@@ -500,8 +498,8 @@ $("#grados-centigrados").prop("disabled",true)
         })
 
         var year = today.getFullYear();
-        var month = (today.getMonth() + 1) ; console.log(month)
-        var day = today.getDate(); console.log(day)
+        var month = (today.getMonth() + 1) ; 
+        var day = today.getDate();
         
         var woeid = new Array();
        woeid['barcelona'] = 753692;
@@ -518,10 +516,10 @@ $("#grados-centigrados").prop("disabled",true)
         if (clave === ciudad_lower){
             idCity=woeid[clave]
         }
-      console.log(clave+": " +woeid[clave]);
+      
     }
 
-    console.log(idCity)
+
 
     var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
 
@@ -555,7 +553,7 @@ $("#grados-centigrados").prop("disabled",true)
             method: 'GET',
             url:  urllocation,
             success: function(data){
-                console.log(data)
+              
                 const template = data.map(location =>(
 
                     $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
@@ -589,8 +587,8 @@ $("#grados-centigrados").prop("disabled",true)
         })
 
         var year = today.getFullYear();
-        var month = (today.getMonth() + 1) ; console.log(month)
-        var day = today.getDate(); console.log(day)
+        var month = (today.getMonth() + 1) ;
+        var day = today.getDate(); 
         
         var woeid = new Array();
        woeid['barcelona'] = 753692;
@@ -607,10 +605,10 @@ $("#grados-centigrados").prop("disabled",true)
         if (clave === ciudad_lower){
             idCity=woeid[clave]
         }
-      console.log(clave+": " +woeid[clave]);
+
     }
 
-    console.log(idCity)
+
     var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
 
 
@@ -618,7 +616,7 @@ $("#grados-centigrados").prop("disabled",true)
         method: 'GET',
         url:  urlLocation,
         success: function(data){
-            console.log(data)
+       
       
                 $("#numero-wind").html(Math.round(data[0].wind_speed)),
                 $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
@@ -642,7 +640,7 @@ $("#grados-centigrados").prop("disabled",true)
             method: 'GET',
             url:  urllocation,
             success: function(data){
-                console.log(data)
+             
                 const template = data.map(location =>(
 
                     $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
@@ -677,8 +675,8 @@ $("#grados-centigrados").prop("disabled",true)
         })
 
         var year = today.getFullYear();
-        var month = (today.getMonth() + 1) ; console.log(month)
-        var day = today.getDate(); console.log(day)
+        var month = (today.getMonth() + 1) ; 
+        var day = today.getDate(); 
         
         var woeid = new Array();
        woeid['barcelona'] = 753692;
@@ -695,10 +693,10 @@ $("#grados-centigrados").prop("disabled",true)
         if (clave === ciudad_lower){
             idCity=woeid[clave]
         }
-      console.log(clave+": " +woeid[clave]);
+
     }
 
-    console.log(idCity)
+ 
     var urlLocation = 'https://www.metaweather.com/api/location/'+idCity+'/'+year+'/'+month+'/'+day+'/'  
 
 
@@ -706,7 +704,7 @@ $("#grados-centigrados").prop("disabled",true)
         method: 'GET',
         url:  urlLocation,
         success: function(data){
-            console.log(data)
+       
           
                 $("#numero-wind").html(Math.round(data[0].wind_speed)),
                 $("#numero-airpressure").html(Math.round(data[0].air_pressure)),
@@ -730,7 +728,7 @@ $("#grados-centigrados").prop("disabled",true)
             method: 'GET',
             url:  urllocation,
             success: function(data){
-                console.log(data)
+                
                 const template = data.map(location =>(
 
                     $('#'+attr1).html(Math.round(location.max_temp) +'℃' ),
